@@ -1,0 +1,62 @@
+package Modelo;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+/**
+ *
+ * @author Andres Mendez
+ */
+@Entity
+@Table(name = "score")
+public class Score implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    private Integer idScore;
+    private String messageTex;
+    private Integer starts;
+
+    @OneToOne
+    @JsonIgnoreProperties("score")
+    private Reservation reservation;
+
+    public Integer getIdScore() {
+        return idScore;
+    }
+
+    public void setIdScore(Integer idScore) {
+        this.idScore = idScore;
+    }
+
+    public String getMessageTex() {
+        return messageTex;
+    }
+
+    public void setMessageTex(String messageTex) {
+        this.messageTex = messageTex;
+    }
+
+    public Integer getStarts() {
+        return starts;
+    }
+
+    public void setStarts(Integer starts) {
+        this.starts = starts;
+    }
+
+    public Reservation getReservation() {
+        return reservation;
+    }
+
+    public void setReservation(Reservation reservation) {
+        this.reservation = reservation;
+    }
+}
