@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.AndresMendez.AlquilerBarcosReto03.AlquilerBarcosReto03ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.288 s <<< FAILURE! - in com.AndresMendez.AlquilerBarcosReto03.AlquilerBarcosReto03ApplicationTests
+com.AndresMendez.AlquilerBarcosReto03.AlquilerBarcosReto03ApplicationTests  Time elapsed: 0.286 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+
